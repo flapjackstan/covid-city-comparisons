@@ -57,17 +57,21 @@ la <- la %>% mutate(OVER_55 = `AGE_55_59`+`AGE_60_64`+`AGE_65_74`+`AGE_75_84`+`A
 
 #############################[REGRESSIONS]#####################################
 
+# ny
 ny_mod <- lm(AVG_PHLTH~ MINORITY_COMMUNITY+MEDIAN_INCOME+avg_ppl_per_household, data=ny)
 summary(ny_mod)
 
 ny_covid <- lm(`4_16_2020_positive_rate`~ AVG_PHLTH + POP_DENSITY + UNINSURED +OVER_55, data=ny)
 summary(ny_covid)
 
+#la
 la_mod <- lm(PHLTH~ MINORITY_COMMUNITY+MEDIAN_INCOME+avg_ppl_per_household, data=la)
 summary(la_mod)
 
 la_covid <- lm(`Case_Rat_1`~ PHLTH + POP_DENSITY + UNINSURED +OVER_55, data=la)
 summary(la_covid)
+
+# Analysis
 
 #############################[NY MAPS]#####################################
 
@@ -85,9 +89,11 @@ map_phlth
 
 map <- tmap_arrange(map_minority, map_phlth)
 map
+tmap_save(map, filename = "images/ny-minority-phlth.png")
 
 map <- tmap_arrange(map_minority, map_covid)
 map
+tmap_save(map, filename = "images/ny-minority-covid.png")
 
 #############################[LA MAPS]#####################################
 
@@ -99,12 +105,14 @@ phlth <- tm_shape(la) + tm_polygons(col = "PHLTH",style = "jenks", title = "CDC 
 map_phlth <- phlth + tm_layout(scale = 1, frame = FALSE)
 map_phlth
 
-positive_rate <- tm_shape(la) + tm_polygons(col = "Case_Rat_1", style = "jenks", title = "COVID Positive Rate\nJuly 27, 2020")
+positive_rate <- tm_shape(la) + tm_polygons(col = "Case_Rat_1", style = "jenks", title = "COVID Positive Rate per 100k  \nSeptember 15th, 2020")
 map_covid <- positive_rate + tm_layout(scale = 1, frame = FALSE)
 map_covid
 
 map <- tmap_arrange(map_minority, map_phlth)
 map
+tmap_save(map, filename = "images/la-minority-phlth.png")
 
 map <- tmap_arrange(map_minority, map_covid)
 map
+tmap_save(map, filename = "images/la-minority-covid.png")
