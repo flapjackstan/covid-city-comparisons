@@ -107,7 +107,7 @@ means = ['intersect_PHLTH_CrudePrev', 'intersect_MHLTH_CrudePrev',
        'intersect_BPHIGH_CrudePrev', 'intersect_CHD_CrudePrev',
        'intersect_OBESITY_CrudePrev','intersect_MEDIAN_INCOME', 'intersect_avg_ppl_per_household']
 
-sums = ['intersect_TOTAL_POP','intersect_NH_BLACK', 'intersect_NH_NATIVE', 'intersect_NH_ASIAN',
+sums = ['intersect_TOTAL_POP','intersect_NH_WHITE','intersect_NH_BLACK', 'intersect_NH_NATIVE', 'intersect_NH_ASIAN',
        'intersect_NH_HAWAIIAN', 'intersect_NH_OTHER_RACE',
        'intersect_NH_TWO_OR_MORE', 'intersect_NH_HISPANIC_LATINO',
        'intersect_US_BORN', 'intersect_NATURALIZED',
