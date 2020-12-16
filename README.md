@@ -12,9 +12,17 @@ Public health departments from both cities are publishing data at different geog
 ![alt text](images/ny-minority-phlth.png)
 ![alt text](images/ny-minority-covid.png)
 
-Within both geographies, poor physical health is significantly present within communities of color and in turn have significant associations with COVID19 Positive Case Rates.
+Within both geographies, poor physical health is significantly present within communities of color and in turn have significant associations with COVID19 positive case rates when taking into account insured persons and people over the age of 55, and average number of people per household. Various other variables are still being analyzed, however, differnces in geography and data aggregation prove to be a larger challenge that requires more time to fully understand. 
 
 ![alt text](images/la-minority-phlth.png)
 ![alt text](images/la-minority-covid.png)
 
+## Replication
+
+In order to replicate this study you must run below programs in order.
+
+- census-api.py (pulls data from census api)
+- la-apportionment.py (apportions census tract variables to neighborhood geography)
+- ny-join.py (joins previously gathered NY data and census variables)
+- compare.r (analysis and visualization)
 
