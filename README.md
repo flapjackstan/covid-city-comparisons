@@ -9,10 +9,11 @@ Public health departments from both cities are publishing data at different geog
 
 ## Initial Findings
 
+Within both geographies, poor physical health is significantly present within communities of color and in turn have significant associations with COVID19 positive case rates when taking into account insured persons and people over the age of 55, and average number of people per household. Various other variables are still being analyzed, however, differnces in geography and data aggregation prove to be a larger challenge that requires more time to fully understand. 
+
 ![alt text](images/ny-minority-phlth.png)
 ![alt text](images/ny-minority-covid.png)
 
-Within both geographies, poor physical health is significantly present within communities of color and in turn have significant associations with COVID19 positive case rates when taking into account insured persons and people over the age of 55, and average number of people per household. Various other variables are still being analyzed, however, differnces in geography and data aggregation prove to be a larger challenge that requires more time to fully understand. 
 
 ![alt text](images/la-minority-phlth.png)
 ![alt text](images/la-minority-covid.png)
