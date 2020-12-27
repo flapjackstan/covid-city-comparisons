@@ -27,3 +27,7 @@ In order to replicate this study you must run below programs in order.
 - `ny-join.py` (joins previously gathered NY data and census variables)
 - `compare.r` (analysis and visualization)
 
+
+## To Do
+
+- Implement fixed effects model
